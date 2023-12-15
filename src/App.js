@@ -1,23 +1,19 @@
-import {  Route, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import Form from './components/Formulaire';
-import Modification from './pages/Modification';
+import './App.css';
+import { Route, Routes,  BrowserRouter} from 'react-router-dom';
+import DashboardPage from './Dashoard';
+import FormPage from './Formulaire';
+import ModifyCheckPage from './ModifyCheck';
 
 
 function App() {
- 
-
   return (
     <>
-  
-        <Routes>
-          <Route exact path="/" element={<Dashboard/>} />
-          <Route path="/form" element={<Form />} />
-          <Route path="/modif" element={<Modification/>} />
-        </Routes>
- 
-
-  </>
+      <Routes>
+        <Route exact path="/" element={<DashboardPage />} />
+        <Route path="/form" element={<FormPage />} />
+        <Route path="/modify" element={<ModifyCheckPage />} />
+      </Routes>
+    </>
   );
 }
 
